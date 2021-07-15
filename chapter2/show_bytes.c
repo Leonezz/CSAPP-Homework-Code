@@ -23,19 +23,24 @@ void show_ptr(void *x)
     show_bytes((uint8_t *)&x, sizeof(void *));
 }
 
-void show_str(const char* s, uint32_t len){
-    show_bytes((uint8_t*)s, len);
+void show_str(const char *s, uint32_t len)
+{
+    show_bytes((uint8_t *)s, len);
 }
 
-void test_int(int val){
+void test_int(int val)
+{
     show_int(val);
     show_float((float)val);
     show_ptr(&val);
 }
 
-int main(int argc, char* argv[]){
-    test_int(12345);
-    show_str("abcdef", 7);
+int main(int argc, char *argv[])
+{
+    short x = 12345;
+    short mx = -x;
+    show_bytes((uint8_t *)&x, sizeof(short));
+    show_bytes((uint8_t *)&mx, sizeof(short));
 }
 
 /*
