@@ -44,7 +44,6 @@ int main(int argc, char *argv[])
 }
 
 /*
-
 In Linux64:
     39 30 00 00
     00 e4 40 46
