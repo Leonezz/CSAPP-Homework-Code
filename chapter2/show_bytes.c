@@ -37,10 +37,10 @@ void test_int(int val)
 
 int main(int argc, char *argv[])
 {
-    short x = 12345;
-    short mx = -x;
-    show_bytes((uint8_t *)&x, sizeof(short));
-    show_bytes((uint8_t *)&mx, sizeof(short));
+    int x = 0x80000000;
+    int mx = ~!!x + 1;
+    show_bytes((uint8_t *)&x, sizeof(int));
+    show_bytes((uint8_t *)&mx, sizeof(int));
 }
 
 /*
